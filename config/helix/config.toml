@@ -1,0 +1,15 @@
+theme = "nord-night"
+
+[editor.file-picker]
+hidden = false
+
+[editor.lsp]
+enable = true
+display-inlay-hints = true
+
+[editor.gutters]
+layout = ["diff", "diagnostics", "line-numbers", "spacer"]
+
+[keys.normal]
+A-w = ":set whitespace.render all"
+A-q = ":set whitespace.render none"
