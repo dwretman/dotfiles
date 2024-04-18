@@ -25,8 +25,8 @@
 	cmd = code --wait --diff $LOCAL $REMOTE
 
 [include]
-	path = ~/config/1pass/.gitconfig
+	path = ~/.config/git/1password.inc
 
 [includeIf "gitdir:~/work/"]
-	path = ~/config/ferroamp/.gitconfig
-	
+	path = ~/.config/git/ferroamp.inc
+
