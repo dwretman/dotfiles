@@ -112,7 +112,7 @@ alias code="GTK_IM_MODULE=\"xim\" code"
 
 WORKON_HOME="$HOME/work/.venv"
 VIRTUALENVWRAPPER_PYTHON="/usr/bin/python3.10"
-. $HOME/.local/bin/virtualenvwrapper.sh > /dev/null
+[ -d ~/.local/bin/virtualenvwrapper.sh ] && source $HOME/.local/bin/virtualenvwrapper.sh > /dev/null
 
 
 
@@ -122,7 +122,8 @@ PERL_LOCAL_LIB_ROOT="/home/dwr/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROO
 PERL_MB_OPT="--install_base \"/home/dwr/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/dwr/perl5"; export PERL_MM_OPT;
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# Initialize homebrew
+[ -d /home/linuxbrew ] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
