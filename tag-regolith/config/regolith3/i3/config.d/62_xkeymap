@@ -1,0 +1,3 @@
+# Remap caps lock to Esc
+exec_always --no-startup-id xmodmap -e "clear lock"
+exec_always --no-startup-id xmodmap -e "keycode 66 = Escape NoSymbol Escape"

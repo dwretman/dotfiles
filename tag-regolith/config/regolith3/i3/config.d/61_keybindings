@@ -1,0 +1,2 @@
+## Modify // Move workspace to display right // <> m ##
+bindsym $mod+m move workspace to output right
