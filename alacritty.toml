@@ -1,0 +1,10 @@
+import = ["/home/dwr/.config/alacritty/themes/themes/one_dark.toml"]
+
+[font]
+size = 12.0
+
+[font.normal]
+family = "MesloLGS NF"
+
+[keyboard]
+bindings = [ { key = "Space", mods = "Control",  action = "ToggleViMode"}, ]
