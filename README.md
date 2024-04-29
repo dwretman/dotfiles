@@ -11,3 +11,4 @@ These are my dotfiles for setting up a Linux account to my liking.
   - Helix editor
   - ripgrep
   - [zoxide](https://github.com/ajeetdsouza/zoxide)
+  - [atuin](https://github.com/atuinsh/atuin)

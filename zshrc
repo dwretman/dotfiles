@@ -132,3 +132,5 @@ PERL_MM_OPT="INSTALL_BASE=/home/dwr/perl5"; export PERL_MM_OPT;
 eval "$(zoxide init zsh)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# Initualize atuin
+eval "$(atuin init zsh --disable-up-arrow)"
