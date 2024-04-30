@@ -112,7 +112,7 @@ alias code="GTK_IM_MODULE=\"xim\" code"
 
 WORKON_HOME="$HOME/work/.venv"
 VIRTUALENVWRAPPER_PYTHON="/usr/bin/python3.10"
-[ -d ~/.local/bin/virtualenvwrapper.sh ] && source $HOME/.local/bin/virtualenvwrapper.sh > /dev/null
+[ -f ~/.local/bin/virtualenvwrapper.sh ] && source $HOME/.local/bin/virtualenvwrapper.sh > /dev/null
 
 
 
