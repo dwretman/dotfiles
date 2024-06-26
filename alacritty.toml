@@ -8,3 +8,6 @@ family = "MesloLGS NF"
 
 [keyboard]
 bindings = [ { key = "Space", mods = "Control",  action = "ToggleViMode"}, ]
+
+[env]
+TERM="xterm-256color"
