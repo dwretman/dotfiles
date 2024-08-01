@@ -1,0 +1,8 @@
+{
+    "variables": {
+        "known": [
+            "EXTERNALSRC",
+            "OVERLAYFS_WRITABLE_PATHS"
+        ]
+    }
+}
