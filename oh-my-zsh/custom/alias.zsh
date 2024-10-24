@@ -11,3 +11,5 @@ picoterm(){
 fixssh() {
   eval $(tmux show-env -s |grep '^SSH_')
 }
+
+alias lg='lazygit'
