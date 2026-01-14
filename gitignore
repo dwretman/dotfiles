@@ -1,2 +1,6 @@
 .zed
 .helix
+.vscode*
+.lesshst
+.viminfo
+.cargo
