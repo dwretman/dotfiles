@@ -30,3 +30,5 @@
 [includeIf "gitdir:~/work/"]
 	path = ~/.config/git/ferroamp.inc
 
+[push]
+	autoSetupRemote = true
