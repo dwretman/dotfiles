@@ -15,3 +15,5 @@ These are my dotfiles for setting up a Linux account to my liking.
   - [zoxide](https://github.com/ajeetdsouza/zoxide)
   - [fzf](https://github.com/junegunn/fzf)
   - [atuin](https://github.com/atuinsh/atuin)
+  - [starship](https://starship.rs/)
+  - [1password](https://1password.com/)
