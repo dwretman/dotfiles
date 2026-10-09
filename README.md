@@ -17,3 +17,9 @@ These are my dotfiles for setting up a Linux account to my liking.
   - [atuin](https://github.com/atuinsh/atuin)
   - [starship](https://starship.rs/)
   - [1password](https://1password.com/)
+  - [tlp](https://linrunner.de/tlp/index.html)
+
+## Files outside ~
+
+rcm does not track files outside the home directory. To keep track of such
+files even if they are manually manged, I have added them under `tag-global`.
