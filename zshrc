@@ -105,9 +105,6 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Init cargo
-source $HOME/.cargo/env
-
 # Enable starship.rs
 eval "$(starship init zsh)"
 
@@ -125,11 +122,8 @@ eval "$(zoxide init zsh)"
 # SSH session in alacritty
 export TERM=xterm
 
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init - zsh)"
+# 1password
 source /home/david/.config/op/plugins.sh
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# Init cargo
+source $HOME/.cargo/env
