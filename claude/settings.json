@@ -1,0 +1,50 @@
+{
+  "env": {
+    "GIT_CONFIG_COUNT": "1",
+    "GIT_CONFIG_KEY_0": "commit.gpgsign",
+    "GIT_CONFIG_VALUE_0": "false"
+  },
+  "sandbox": {
+    "filesystem": {
+      "allowWrite": [
+        "~/.cache/pre-commit",
+        "~/.cache/pip"
+      ]
+    },
+    "network": {
+      "allowedDomains": [
+        "github.com",
+        "pypi.org",
+        "files.pythonhosted.org"
+      ]
+    }
+  },
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "notify-send 'Claude Code' \"Task finished in $(basename \"$PWD\")\" 2>/dev/null; paplay /usr/share/sounds/freedesktop/stereo/complete.oga 2>/dev/null || true",
+            "async": true
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "notify-send -u critical 'Claude Code' \"Needs your input in $(basename \"$PWD\")\" 2>/dev/null; paplay /usr/share/sounds/freedesktop/stereo/message-new-instant.oga 2>/dev/null || true",
+            "async": true
+          }
+        ]
+      }
+    ]
+  },
+  "enabledPlugins": {
+    "rust-analyzer-lsp@claude-plugins-official": true
+  },
+  "theme": "dark"
+}
