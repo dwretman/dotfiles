@@ -4,3 +4,6 @@
 .lesshst
 .viminfo
 .cargo
+.claude
+CLAUDE.md
+AGENT_TODO.md
