@@ -19,6 +19,13 @@ These are my dotfiles for setting up a Linux account to my liking.
   - [1password](https://1password.com/)
   - [tlp](https://linrunner.de/tlp/index.html)
 
+   On Debian 13, the shell tools used by `zshrc` are packaged (Oh My Zsh is
+   installed with its own script, 1Password from its own apt repo):
+   ```sh
+   sudo apt install zsh starship zoxide fzf atuin neovim ripgrep
+   chsh -s /usr/bin/zsh
+   ```
+
 ## Desktop (sway)
 
 The sway desktop configs (sway, waybar, foot, swaylock) are under `config/`.
