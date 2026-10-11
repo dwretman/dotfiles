@@ -22,8 +22,23 @@ These are my dotfiles for setting up a Linux account to my liking.
    On Debian 13, the shell tools used by `zshrc` are packaged (Oh My Zsh is
    installed with its own script, 1Password from its own apt repo):
    ```sh
-   sudo apt install zsh starship zoxide fzf atuin neovim ripgrep
+   sudo apt install zsh starship zoxide fzf neovim ripgrep
    chsh -s /usr/bin/zsh
+   ```
+
+   atuin: Debian's package (18.6) is too old for `config/atuin/config.toml`
+   (`daemon-fuzzy` search and daemon `autostart`). Install the release binary
+   into `~/.atuin/bin` instead, which `zshrc` puts on `PATH`. Avoid atuin's
+   `curl | sh` installer: it appends to `~/.zshrc`, which is a symlink into
+   this repo. Install or update (set `V` to the latest release):
+   ```sh
+   V=18.23.0; T=atuin-x86_64-unknown-linux-gnu.tar.gz
+   cd "$(mktemp -d)"
+   curl -fLO https://github.com/atuinsh/atuin/releases/download/v$V/$T
+   curl -fLO https://github.com/atuinsh/atuin/releases/download/v$V/$T.sha256
+   sha256sum -c $T.sha256 && tar -xzf $T
+   mkdir -p ~/.atuin/bin && install -m 755 */atuin ~/.atuin/bin/atuin
+   printf '%s\n' 'case ":${PATH}:" in *:"$HOME/.atuin/bin":*) ;; *) export PATH="$HOME/.atuin/bin:$PATH" ;; esac' > ~/.atuin/bin/env
    ```
 
 ## Desktop (sway)
