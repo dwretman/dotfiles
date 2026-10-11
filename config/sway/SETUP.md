@@ -77,12 +77,17 @@ cd ~/.dotfiles && rcup config/<app>/<file>   # creates the symlink
    sway ignores the include and uses its automatic layout. The file is
    machine-specific, so it's not in the dotfiles repo.
 
-2. **Touchpad uses reversed ("natural") scrolling** (input section):
+2. **Touchpad: reversed ("natural") scrolling and tap to click** (input section):
    ```
    input type:touchpad {
        natural_scroll enabled
+       tap enabled
+       tap_button_map lrm
    }
    ```
+   Tap to click: one-finger tap is a left click, two-finger tap a right click,
+   three-finger tap a middle click (`lrm` = left/right/middle; `lmr` would
+   swap the two- and three-finger taps). Tapping is off by default in sway.
    To reverse the mouse wheel too, add the same block with `type:pointer`.
    Device names: `swaymsg -t get_inputs`. Docs: `man 5 sway-input`.
 

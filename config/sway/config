@@ -81,6 +81,8 @@ exec swayidle -w \
 
 input type:touchpad {
     natural_scroll enabled
+    tap enabled
+    tap_button_map lrm
 }
 
 input type:keyboard {
