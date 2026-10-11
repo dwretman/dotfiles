@@ -118,9 +118,10 @@ eval "$(atuin init zsh --disable-up-arrow)"
 # Init zoxide
 eval "$(zoxide init zsh)"
 
-# Fix "WARNING: terminal is not fully functional" issue when starting an
-# SSH session in alacritty
-export TERM=xterm
+# Remote hosts usually lack the local terminal's terminfo (e.g. foot), which
+# gives "WARNING: terminal is not fully functional". Use a TERM every host
+# knows, only for SSH, so local programs keep full color support.
+alias ssh='TERM=xterm-256color ssh'
 
 # 1password
 source /home/david/.config/op/plugins.sh
