@@ -19,6 +19,12 @@ These are my dotfiles for setting up a Linux account to my liking.
   - [1password](https://1password.com/)
   - [tlp](https://linrunner.de/tlp/index.html)
 
+## Desktop (sway)
+
+The sway desktop configs (sway, waybar, foot, swaylock) are under `config/`.
+Packages, extra install steps (Nerd Font, monitor layout) and an explanation
+of every change are in [config/sway/SETUP.md](config/sway/SETUP.md).
+
 ## Files outside ~
 
 rcm does not track files outside the home directory. To keep track of such
