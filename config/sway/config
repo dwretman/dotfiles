@@ -15,6 +15,8 @@ set $up k
 set $right l
 # Your preferred terminal emulator
 set $term foot
+# Your preferred web browser
+set $browser firefox-esr
 # Your preferred application launcher
 set $menu wmenu-run
 
@@ -108,6 +110,9 @@ client.urgent           #900000 #900000 #ffffff #900000   #900000
 #
     # Start a terminal
     bindsym $mod+Return exec $term
+
+    # Start a web browser
+    bindsym $mod+Shift+Return exec $browser
 
     # Kill focused window
     bindsym $mod+Shift+q kill

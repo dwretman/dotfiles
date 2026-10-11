@@ -197,6 +197,15 @@ cd ~/.dotfiles && rcup config/<app>/<file>   # creates the symlink
    `swayidle` is started by `exec`, so after changing its timeouts, log out and
    back in, or run `pkill swayidle` and start the new command with `swaymsg exec`.
 
+10. **Browser key binding** (variables at the top, plus Key bindings > Basics):
+    ```
+    set $browser firefox-esr
+
+    bindsym $mod+Shift+Return exec $browser
+    ```
+    `$mod+Shift+Return` opens Firefox ESR, next to `$mod+Return` for the
+    terminal. To use another browser, change `$browser`.
+
 ## waybar
 
 Right side, left to right: volume, network, Bluetooth, screen brightness,
@@ -266,6 +275,7 @@ https://github.com/ryanoasis/nerd-fonts/releases.
 | Monitor layout / resolution  | `nwg-displays`, then **Apply**                   |
 | GTK theme, icons, font, cursor | `nwg-look`, then **Apply**                     |
 | Lock screen                  | `$mod+Escape`                                    |
+| Open web browser             | `$mod+Shift+Return`                              |
 | Reload sway config           | `$mod+Shift+c` (`exec` lines only run at login; `exec_always` runs on every reload) |
 | Check config for errors      | `sway -C -c ~/.config/sway/config`               |
 
