@@ -111,8 +111,8 @@ eval "$(starship init zsh)"
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 
-# Init Atuin
-. "$HOME/.atuin/bin/env"
+# Init Atuin (from apt, or from atuin's install script which adds ~/.atuin)
+[[ -f "$HOME/.atuin/bin/env" ]] && . "$HOME/.atuin/bin/env"
 eval "$(atuin init zsh --disable-up-arrow)"
 
 # Init zoxide
