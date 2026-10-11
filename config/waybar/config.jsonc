@@ -1,0 +1,62 @@
+// Waybar config, started by sway (see ~/.config/sway/SETUP.md).
+// Module docs: man waybar, man waybar-<module>
+{
+    "layer": "top",
+    "position": "top",
+    "height": 26,
+    "spacing": 4,
+
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["clock"],
+    "modules-right": ["pulseaudio", "network", "bluetooth", "backlight", "battery", "tray"],
+
+    "clock": {
+        "format": "{:%Y-%m-%d %H:%M}",
+        "tooltip-format": "<tt>{calendar}</tt>"
+    },
+
+    // Left-click: open pavucontrol. Scroll: change volume. Right-click: mute.
+    "pulseaudio": {
+        "format": "vol {volume}%",
+        "format-muted": "vol muted",
+        "on-click": "pavucontrol",
+        "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+    },
+
+    // Left-click: open nm-connection-editor.
+    "network": {
+        "format-wifi": "wifi {essid} {signalStrength}%",
+        "format-ethernet": "eth {ipaddr}",
+        "format-disconnected": "offline",
+        "tooltip-format": "{ifname} {ipaddr}/{cidr}",
+        "on-click": "nm-connection-editor"
+    },
+
+    // Left-click: open blueman-manager.
+    "bluetooth": {
+        "format": "bt {status}",
+        "format-connected": "bt {device_alias}",
+        "format-connected-battery": "bt {device_alias} {device_battery_percentage}%",
+        "format-disabled": "bt off",
+        "tooltip-format-connected": "{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias} {device_address}",
+        "on-click": "blueman-manager"
+    },
+
+    "backlight": {
+        "format": "light {percent}%"
+    },
+
+    "battery": {
+        "states": { "warning": 25, "critical": 10 },
+        "format": "bat {capacity}%",
+        "format-charging": "bat {capacity}% +",
+        "format-plugged": "bat {capacity}% =",
+        "tooltip-format": "{timeTo}"
+    },
+
+    // Right-click an icon for its menu (works in waybar, unlike swaybar).
+    "tray": {
+        "spacing": 8
+    }
+}
