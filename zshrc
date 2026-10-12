@@ -128,6 +128,19 @@ alias ssh='TERM=xterm-256color ssh'
 # 1password
 source /home/david/.config/op/plugins.sh
 
+# Run poetry's repository commands through `op run`, so the private PyPI
+# token comes from 1Password instead of ~/.config/pypoetry/auth.toml. Other
+# commands (e.g. `poetry run`) don't get the token in their environment.
+poetry() {
+  case "$1" in
+    install|update|lock|add|remove|sync|show)
+      # op runs a program, not a shell builtin, so pass poetry's real path
+      op run --env-file="$HOME/.config/op/poetry.env" -- "$(whence -p poetry)" "$@" ;;
+    *)
+      command poetry "$@" ;;
+  esac
+}
+
 # Init cargo
 source $HOME/.cargo/env
 
