@@ -91,9 +91,9 @@ input type:keyboard {
 
 ### Window appearance
 #
-# Minimal, Regolith-like look: no title bars, only a thin frame (blue when
-# focused, gray otherwise), small gaps between windows, and no frame
-# when a window is alone on its workspace. Tabbed and stacked layouts still
+# Minimal, Regolith-like look: no title bars, only a thin frame (pale
+# teal-cyan when focused, gray otherwise), small gaps between windows, and no
+# frame when a window is alone on its workspace. Tabbed and stacked layouts still
 # show tab titles.
 default_border pixel 2
 default_floating_border pixel 2
@@ -101,7 +101,7 @@ gaps inner 6
 hide_edge_borders smart
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #4c7899 #285577 #ffffff #7aa6c8   #4c7899
+client.focused          #88c0d0 #285577 #ffffff #c8e6ee   #88c0d0
 client.focused_inactive #777777 #323232 #aaaaaa #777777   #777777
 client.unfocused        #777777 #222222 #888888 #777777   #777777
 client.urgent           #900000 #900000 #ffffff #900000   #900000
