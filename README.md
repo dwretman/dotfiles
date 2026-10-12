@@ -41,6 +41,17 @@ These are my dotfiles for setting up a Linux account to my liking.
    printf '%s\n' 'case ":${PATH}:" in *:"$HOME/.atuin/bin":*) ;; *) export PATH="$HOME/.atuin/bin:$PATH" ;; esac' > ~/.atuin/bin/env
    ```
 
+## Neovim
+
+`config/nvim` uses helix keymaps (`lua/helix.lua`, selection-first, emulated
+with visual mode; `v` enters select mode; multiple selections through
+multicursor.nvim) and Zed's One Dark theme
+(`colors/zed-onedark.lua`). It works with Debian 13's neovim (0.10). Plugins
+are installed by lazy.nvim on first start, and treesitter parsers are compiled
+with `gcc`. Language servers are started when installed (`rust-analyzer`,
+`ruff`, `pyright` or `pylsp`, `clangd`, `lua-language-server`,
+`bash-language-server`).
+
 ## Desktop (sway)
 
 The sway desktop configs (sway, waybar, foot, swaylock) are under `config/`.
