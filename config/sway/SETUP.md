@@ -10,7 +10,7 @@ and are symlinked into place by [rcm](https://github.com/thoughtbot/rcm)'s
 ## Packages
 
 ```sh
-sudo apt install sway network-manager-gnome blueman pavucontrol nwg-displays nwg-look lxpolkit waybar desktop-base swaylock swayidle
+sudo apt install sway network-manager-gnome blueman pavucontrol nwg-displays nwg-look lxpolkit waybar desktop-base swaylock swayidle jq
 ```
 
 | Area          | Tool                                         | Package                 |
@@ -281,6 +281,7 @@ https://github.com/ryanoasis/nerd-fonts/releases.
 | GTK theme, icons, font, cursor | `nwg-look`, then **Apply**                     |
 | Lock screen                  | `$mod+Escape`                                    |
 | Open web browser             | `$mod+Shift+Return`                              |
+| Move workspace to other display | `$mod+m` (needs `jq`)                       |
 | Reload sway config           | `$mod+Shift+c` (`exec` lines only run at login; `exec_always` runs on every reload) |
 | Check config for errors      | `sway -C -c ~/.config/sway/config`               |
 
