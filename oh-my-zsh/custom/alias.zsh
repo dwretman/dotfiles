@@ -13,3 +13,15 @@ fixssh() {
 }
 
 alias lg='lazygit'
+
+# Git worktree add + cd: create branch <branch> in a new worktree at
+# <path>/<branch> and cd into it. Named to sit beside oh-my-zsh's git plugin
+# worktree aliases (gwt, gwta, gwtls, gwtmv, gwtrm).
+gwtac() {
+  if (( $# != 2 )); then
+    echo "usage: gwtac <branch> <path>" >&2
+    return 1
+  fi
+  local dir="${2%/}/$1"
+  git worktree add -b "$1" "$dir" && cd "$dir"
+}
